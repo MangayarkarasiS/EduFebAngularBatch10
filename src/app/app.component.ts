@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EduFeb10';
+  title = 'Edureka input variable';
+  Color:string='Red';
+  age:number=52;
+  ShowComp:boolean=false;
+
+  showorHide(){
+    this.ShowComp=!this.ShowComp;
+  }
 }

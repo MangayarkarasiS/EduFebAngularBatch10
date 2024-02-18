@@ -1,0 +1,15 @@
+<p>display works!</p>
+
+<p class="text-bg-danger">I am inside display component</p>
+<button type="button" class="btn btn-success">Green Color</button>
+<hr>
+
+<h2>binding data from class to template through string interpolation</h2>
+<h3>Name of Fruit purchased :{{FruitName}}</h3>
+<input type="text" value={{FruitName}}/>
+
+<h2>binding data from class to template through property binding</h2>
+<input type="text" [value]="FruitName"/>
+
+<button type="button" (click)="ChangeFruitName()">Change Name</button>
+

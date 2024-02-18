@@ -1,0 +1,17 @@
+2 ways for creating components:
+------------------------------------
+
+1st way: to create a login component
+
+1. typesript file should be created - login.component.ts
+2. html file should be created - login.component.html
+3. css file should be created - login.component.css
+4. testing file - login.component.spec.ts
+5. register this component in app.module.ts
+6. call the selector inside the root component
+
+2nd way to enter command in cli: create a display component
+
+1. ng g component display
+or
+ng g c display

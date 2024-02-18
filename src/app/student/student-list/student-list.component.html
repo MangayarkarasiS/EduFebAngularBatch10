@@ -1,0 +1,34 @@
+
+<div class="container">
+    <h2>List of students</h2>
+    <table class="table table-striped">
+        <thead class="table-dark text-white">
+            <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Total Marks</th>
+          <th>Percentage</th>
+          <th>DOB</th>
+          <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+         <!--  <tr *ngFor="let stud of allStudents" [ngSwitch]="stud.studGender">-->
+            <!--<ng-container *ngIf="stud.studTotalMarks>40">-->
+                <!--<tr appMoverHighlight *ngFor="let stud of allStudents" [ngClass]="{'table-danger':stud.studTotalMarks<=50}">-->
+            <tr appMoverHighlight *ngFor="let stud of allStudents">
+            <td>{{stud.id}}</td>
+            <td>{{stud.studName | uppercase}}</td>
+            <td>{{stud.studTotalMarks | currency :'INR':'symbol' }}</td>
+           <!-- <td [ngStyle]="{'color':getMarkColor(stud.studTotalMarks)}">{{stud.studTotalMarks}}</td>-->
+            <td>{{stud.studTotalMarks/100 | percent }}</td>
+            <td>{{stud.studDob | date:'fullDate'}}</td>
+            <td>{{stud.studGender}}</td>
+            <!--<td *ngSwitchCase="'Male'" class="text-success">{{stud.studGender}}</td>
+            <td *ngSwitchCase="'Female'" class="text-warning">{{stud.studGender}}</td>-->
+            
+        <!--</ng-container>-->
+           </tr>
+        </tbody>
+    </table>
+</div>

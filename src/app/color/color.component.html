@@ -1,0 +1,13 @@
+<div class="container">
+<h2>Color Component</h2>
+
+<ul>
+    <li *ngFor="let color of allColors">
+        {{color}} - 
+        <button 
+        type="button" 
+        class="btn btn-danger"
+        (click)="removeColor(color)">Remove</button>
+        <app-color-child [printColor]="color" (deleteEventEmitter)="removeColor($event)"></app-color-child>
+    </li></ul>
+</div>

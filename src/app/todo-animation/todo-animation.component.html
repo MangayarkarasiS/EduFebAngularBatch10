@@ -1,0 +1,13 @@
+<div class="container">
+ <h2> Todo items for the Day</h2>
+ <div class="form-group m-3">
+    <input 
+    type="text" 
+    placeholder="Enter the Todo item list" 
+    [(ngModel)]="todoItem"
+    (change)="addtodoItems()"/>
+    <ul>
+        <li @myFade *ngFor="let todo of allTodo" (click)="removeTodo(todo)">{{todo}}</li>
+    </ul>
+</div>
+</div>
