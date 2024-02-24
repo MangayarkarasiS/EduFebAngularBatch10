@@ -13,10 +13,11 @@
         </tr>
         </thead>
         <tbody>
+            <input type="text" placeholder="Search by Gender" [(ngModel)]="filterData"> 
          <!--  <tr *ngFor="let stud of allStudents" [ngSwitch]="stud.studGender">-->
             <!--<ng-container *ngIf="stud.studTotalMarks>40">-->
-                <!--<tr appMoverHighlight *ngFor="let stud of allStudents" [ngClass]="{'table-danger':stud.studTotalMarks<=50}">-->
-            <tr appMoverHighlight *ngFor="let stud of allStudents">
+              <!--   <tr appMoverHighlight *ngFor="let stud of allStudents" [ngClass]="{'table-danger':stud.studTotalMarks<=50}">-->
+           <tr appMoverHighlight *ngFor="let stud of allStudents|filterList:filterData">
             <td>{{stud.id}}</td>
             <td>{{stud.studName | uppercase}}</td>
             <td>{{stud.studTotalMarks | currency :'INR':'symbol' }}</td>
@@ -28,7 +29,8 @@
             <td *ngSwitchCase="'Female'" class="text-warning">{{stud.studGender}}</td>-->
             
         <!--</ng-container>-->
-           </tr>
+       
         </tbody>
     </table>
+    <button type="button" class="btn btn-success" (click)="addStudent()">Add Student</button>
 </div>

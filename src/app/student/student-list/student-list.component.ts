@@ -7,6 +7,7 @@ import { student } from '../student.model';
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
+  filterData:string='';
   allStudents:student[]=[
     {
       id:1,
@@ -49,5 +50,15 @@ export class StudentListComponent implements OnInit {
     else
     return 'red';
 
+  }
+  addStudent(){
+    let newStudent:student={
+      id:0,
+      studName:'Test',
+      studTotalMarks:80,
+      studDob: new Date(2021,11,12),
+      studGender:'Female'
+    }
+    this.allStudents.push(newStudent);
   }
 }

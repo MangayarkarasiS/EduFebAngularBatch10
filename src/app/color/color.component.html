@@ -2,12 +2,26 @@
 <h2>Color Component</h2>
 
 <ul>
-    <li *ngFor="let color of allColors">
-        {{color}} - 
+    <li *ngFor="let color of allColors;let i=index;">
+        <span *ngIf="!toggleEdit">
+        {{color}} 
+        </span>
+        <span *ngIf="toggleEdit">
+            <input type="text" [(ngModel)]="changeColor">
+        </span>
         <button 
         type="button" 
         class="btn btn-danger"
         (click)="removeColor(color)">Remove</button>
-        <app-color-child [printColor]="color" (deleteEventEmitter)="removeColor($event)"></app-color-child>
+        <button 
+        type="button" *ngIf="!toggleEdit"
+        class="btn btn-primary"
+        (click)="editColor(i,color)">Edit</button>
+        <button 
+        type="button" *ngIf="toggleEdit"
+        class="btn btn-success"
+        (click)="editColor(i,color)">Update</button>
+
+      <!--  <app-color-child [printColor]="color" (deleteEventEmitter)="removeColor($event)"></app-color-child>-->
     </li></ul>
 </div>

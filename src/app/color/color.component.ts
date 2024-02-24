@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color.component.css']
 })
 export class ColorComponent implements OnInit {
+
   allColors:string[]=["Red","Blue","Green"];
-  //color:string="violet";
-  
+  toggleEdit:boolean=false;
+  changeColor:string='';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,5 +18,13 @@ export class ColorComponent implements OnInit {
   removeColor(color:string){
     this.allColors.splice(this.allColors.indexOf(color),1);
   }
+  editColor(index:number,color:string){
+    if(this.toggleEdit)
+    {
+      this.allColors[index]=this.changeColor;
+    }
+    this.toggleEdit=!this.toggleEdit;
+  }
+  
 
 }

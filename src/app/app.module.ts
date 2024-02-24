@@ -17,6 +17,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { HoverHighlightComponent } from './custom-directive/hover-highlight/hover-highlight.component';
 import { MoverHighlightDirective } from './customDirective/mover-highlight.directive';
+import { ExpoPipe } from './custom-pipe/expo.pipe';
+import { NumberListComponent } from './number-list/number-list.component';
+import { CubePipe } from './custom-pipe/cube.pipe';
+import { FilterListPipe } from './custom-pipe/filter-list.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { MoverHighlightDirective } from './customDirective/mover-highlight.direc
     TodoAnimationComponent,
     StudentListComponent,
     HoverHighlightComponent,
-    MoverHighlightDirective
+    MoverHighlightDirective,
+    ExpoPipe,
+    NumberListComponent,
+    CubePipe,
+    FilterListPipe
   
   ],
   imports: [
