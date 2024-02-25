@@ -21,6 +21,9 @@ import { ExpoPipe } from './custom-pipe/expo.pipe';
 import { NumberListComponent } from './number-list/number-list.component';
 import { CubePipe } from './custom-pipe/cube.pipe';
 import { FilterListPipe } from './custom-pipe/filter-list.pipe';
+import { StudentService } from './service/student.service';
+import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,8 @@ import { FilterListPipe } from './custom-pipe/filter-list.pipe';
     ExpoPipe,
     NumberListComponent,
     CubePipe,
-    FilterListPipe
+    FilterListPipe,
+    ObservableDemoComponent
   
   ],
   imports: [
@@ -48,9 +52,10 @@ import { FilterListPipe } from './custom-pipe/filter-list.pipe';
     AppRoutingModule,
     ReactiveFormsModule,  
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

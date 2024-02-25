@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { student } from '../student.model';
+import { StudentService } from 'src/app/service/student.service';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-student-list',
@@ -8,40 +11,22 @@ import { student } from '../student.model';
 })
 export class StudentListComponent implements OnInit {
   filterData:string='';
-  allStudents:student[]=[
-    {
-      id:1,
-      studName:'Tamarai',
-      studTotalMarks:90,
-      studDob: new Date(2020,12,12),
-      studGender:'Female'
-    },
-    {
-      id:2,
-      studName:'Vaish',
-      studTotalMarks:20,
-      studDob: new Date(1990,12,12),
-      studGender:'Female'
-    },
-    {
-      id:3,
-      studName:'Sachin',
-      studTotalMarks:90,
-      studDob: new Date(1998,10,11),
-      studGender:'Male'
-    },
-    {
-      id:4,
-      studName:'Victor',
-      studTotalMarks:80,
-      studDob: new Date(2021,11,12),
-      studGender:'Male'
-    }
-  ];
-  constructor() { }
+  allStudents:student[]=[];
+ // studentService:StudentService=new StudentService();
+  constructor(private studentService:StudentService,private httpClient:HttpClient) {
+    
+   }
 
   ngOnInit(): void {
+  // this.allStudents= this.studentService.getAllStudents();
+  this.studentService.getAllStudents().subscribe({
+    next:(response)=>{this.allStudents=response},
+    error:(err)=>{console.log(err)}
+  })
   }
+
+   
+
   getMarkColor(TotalMarks:number){
     if(TotalMarks>=90)
     return 'green';

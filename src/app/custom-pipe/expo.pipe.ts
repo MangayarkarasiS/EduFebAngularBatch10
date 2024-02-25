@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'expo'
+  name: 'expo'  
 })
 export class ExpoPipe implements PipeTransform {
 

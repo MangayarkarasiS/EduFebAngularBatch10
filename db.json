@@ -1,0 +1,32 @@
+{
+  "student": [
+    {
+      "id":1,
+      "studName":"Tamarai",
+      "studTotalMarks":90,
+      "studDob": "2020,12,12",
+      "studGender":"Female"
+    },
+    {
+      "id":2,
+      "studName":"Vaish",
+      "studTotalMarks":20,
+      "studDob": "1990,12,12",
+      "studGender":"Female"
+    },
+    {
+      "id":3,
+      "studName":"Sachin",
+      "studTotalMarks":90,
+      "studDob": "1998,10,11",
+      "studGender":"Male"
+    },
+    {
+      "id":4,
+      "studName":"Victor",
+      "studTotalMarks":80,
+      "studDob":"2021,11,12",
+      "studGender":"Male"
+    }
+  ]
+}
