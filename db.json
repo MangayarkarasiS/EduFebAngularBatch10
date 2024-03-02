@@ -1,32 +1,25 @@
 {
   "student": [
     {
-      "id":1,
-      "studName":"Tamarai",
-      "studTotalMarks":90,
-      "studDob": "2020,12,12",
-      "studGender":"Female"
-    },
-    {
-      "id":2,
-      "studName":"Vaish",
-      "studTotalMarks":20,
-      "studDob": "1990,12,12",
-      "studGender":"Female"
-    },
-    {
-      "id":3,
-      "studName":"Sachin",
-      "studTotalMarks":90,
+      "id": 1,
+      "studName": "Tamarai Alexander",
+      "studTotalMarks": 94,
       "studDob": "1998,10,11",
-      "studGender":"Male"
+      "studGender": "FeMale"
     },
     {
-      "id":4,
-      "studName":"Victor",
-      "studTotalMarks":80,
-      "studDob":"2021,11,12",
-      "studGender":"Male"
+      "id": 2,
+      "studName": "Trump Sachin",
+      "studTotalMarks": 40,
+      "studDob": "1998,12,11",
+      "studGender": "Male"
+    },
+    {
+      "id": 4,
+      "studName": "Victor",
+      "studTotalMarks": 80,
+      "studDob": "2021,11,12",
+      "studGender": "Male"
     }
   ]
 }

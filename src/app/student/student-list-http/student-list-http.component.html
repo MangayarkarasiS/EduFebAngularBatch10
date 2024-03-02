@@ -10,7 +10,8 @@
           <th>Percentage</th>
           <th>DOB</th>
           <th>Gender</th>
-          <th>View Student</th>
+          <th>View </th>
+          <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
             <td>{{stud.studDob | date:'fullDate'}}</td>
             <td>{{stud.studGender}}</td>
             <td> <button type="button" class="btn btn-warning" (click)="viewStudent(stud.id)">View Student</button></td>
+            <td> <button type="button" class="btn btn-warning" (click)="deleteStudent(stud.id)">Delete Student</button></td>
           </tr>
        
         </tbody>

@@ -26,6 +26,8 @@ import { ObservableDemoComponent } from './observable-demo/observable-demo.compo
 import {HttpClientModule} from '@angular/common/http';
 import { StudentListHttpComponent } from './student/student-list-http/student-list-http.component';
 import { StudentViewHttpComponent } from './student/student-view-http/student-view-http.component';
+import { StudentDeleteHttpComponent } from './student/student-delete-http/student-delete-http.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { StudentViewHttpComponent } from './student/student-view-http/student-vi
     FilterListPipe,
     ObservableDemoComponent,
     StudentListHttpComponent,
-    StudentViewHttpComponent
+    StudentViewHttpComponent,
+    StudentDeleteHttpComponent,
+    ErrorComponent
   
   ],
   imports: [
