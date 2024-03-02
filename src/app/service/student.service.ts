@@ -15,8 +15,15 @@ export class StudentService {
  /* getAllStudents():student[]{
    return this.allStudents;
   }*/
+ ///get response from http - observable
 
   getAllStudents():Observable<student[]>{
     return this.httpClient.get<student[]>(this.baseUrl);
    }
+  getAStudent(studId:number):Observable<student>{
+    return this.httpClient.get<student>(this.baseUrl+'/'+studId);//http://localhost:3000/student/101
+  } 
+  deleteStudent(studId:number):Observable<void>{
+    return this.httpClient.delete<void>(this.baseUrl+'/'+studId);
+  }
 }

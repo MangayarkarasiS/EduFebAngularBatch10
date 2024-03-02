@@ -1,0 +1,32 @@
+
+<div class="container">
+    <h2>List of students</h2>
+    <table class="table table-striped">
+        <thead class="table-dark text-white">
+            <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Total Marks</th>
+          <th>Percentage</th>
+          <th>DOB</th>
+          <th>Gender</th>
+          <th>View Student</th>
+        </tr>
+        </thead>
+        <tbody>
+            
+          <tr  *ngFor="let stud of allStudents">
+            <td>{{stud.id}}</td>
+            <td>{{stud.studName | uppercase}}</td>
+            <td>{{stud.studTotalMarks | currency :'INR':'symbol' }}</td>
+            <td>{{stud.studTotalMarks/100 | percent }}</td>
+            <td>{{stud.studDob | date:'fullDate'}}</td>
+            <td>{{stud.studGender}}</td>
+            <td> <button type="button" class="btn btn-warning" (click)="viewStudent(stud.id)">View Student</button></td>
+          </tr>
+       
+        </tbody>
+    </table>
+    <!--<button type="button" class="btn btn-success" (click)="addStudent()">Add Student</button>-->
+    
+</div>

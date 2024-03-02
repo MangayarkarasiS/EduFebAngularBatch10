@@ -15,3 +15,10 @@
 1. ng g component display
 or
 ng g c display
+
+Routing and Navigation:
+----------------------------
+can be achieved in two ways
+1. Routing can be done through hyperlink (use routerLink to achieve it don't use href)
+2. programmatically we can do it
+

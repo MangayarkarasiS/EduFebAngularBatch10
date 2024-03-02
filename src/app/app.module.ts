@@ -24,6 +24,8 @@ import { FilterListPipe } from './custom-pipe/filter-list.pipe';
 import { StudentService } from './service/student.service';
 import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
 import {HttpClientModule} from '@angular/common/http';
+import { StudentListHttpComponent } from './student/student-list-http/student-list-http.component';
+import { StudentViewHttpComponent } from './student/student-view-http/student-view-http.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import {HttpClientModule} from '@angular/common/http';
     NumberListComponent,
     CubePipe,
     FilterListPipe,
-    ObservableDemoComponent
+    ObservableDemoComponent,
+    StudentListHttpComponent,
+    StudentViewHttpComponent
   
   ],
   imports: [
