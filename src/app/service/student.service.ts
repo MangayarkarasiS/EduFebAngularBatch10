@@ -23,6 +23,12 @@ export class StudentService {
   getAStudent(studId:number):Observable<student>{
     return this.httpClient.get<student>(this.baseUrl+'/'+studId);//http://localhost:3000/student/101
   } 
+  addStudent(stud:student):Observable<student>{
+    return this.httpClient.post<student>(this.baseUrl,stud);
+  }
+  editStudent(stud:student):Observable<student>{
+    return this.httpClient.put<student>(this.baseUrl+'/'+stud.id,stud);
+  }
   deleteStudent(studId:number):Observable<void>{
     return this.httpClient.delete<void>(this.baseUrl+'/'+studId);
   }

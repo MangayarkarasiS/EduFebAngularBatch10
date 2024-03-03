@@ -28,6 +28,9 @@ import { StudentListHttpComponent } from './student/student-list-http/student-li
 import { StudentViewHttpComponent } from './student/student-view-http/student-view-http.component';
 import { StudentDeleteHttpComponent } from './student/student-delete-http/student-delete-http.component';
 import { ErrorComponent } from './error/error.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { StudentAddHttpComponent } from './student/student-add-http/student-add-http.component';
+import { StudentEditHttpComponent } from './student/student-edit-http/student-edit-http.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,9 @@ import { ErrorComponent } from './error/error.component';
     StudentListHttpComponent,
     StudentViewHttpComponent,
     StudentDeleteHttpComponent,
-    ErrorComponent
+    ErrorComponent,
+    StudentAddHttpComponent,
+    StudentEditHttpComponent
   
   ],
   imports: [
@@ -63,7 +68,7 @@ import { ErrorComponent } from './error/error.component';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [StudentService],
+  providers: [/*{provide:LocationStrategy,useClass:HashLocationStrategy}*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

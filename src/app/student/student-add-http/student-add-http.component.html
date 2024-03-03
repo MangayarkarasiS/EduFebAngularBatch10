@@ -1,0 +1,65 @@
+<div class="container">
+    <form #myForm="ngForm" (ngSubmit)="addStudent(myForm)">
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            <h3>Add Student</h3>
+        </div>
+        <div class="card-body">
+           <div class="form-group">
+             <label for="sId" class="form-label">Student ID</label>
+             <input type="text" 
+                    class="form-control" 
+                    name="id" 
+                    id="sId"
+                    ngModel
+                    #myid="ngModel"
+                    >
+           </div>
+           <div class="form-group">
+            <label for="sName" class="form-label">Student Name</label>
+            <input type="text" 
+                   class="form-control" 
+                   name="studName" 
+                   id="sName"
+                   ngModel
+                   #mystudName="ngModel">
+          </div>
+          <div class="form-group">
+            <label for="sMarks" class="form-label">Student TotalMarks</label>
+            <input type="number" 
+                    class="form-control" 
+                    name="studTotalMarks" 
+                    id="sMarks"
+                    ngModel
+                    #mystudTotalMarks="ngModel">
+          </div>
+          <div class="form-group">
+            <label for="sDOB" class="form-label">Student ID</label>
+            <input type="date" ngModel #mystudDob="ngModel" 
+            class="form-control" name="studDob" id="sDOB">
+          </div>
+          <div class="form-check">
+            <input ngModel class="form-check-input" 
+            type="radio" 
+            name="studGender" 
+            id="sGender" 
+            value="Male"
+            #mystudGender="ngModel">
+            <label class="form-check-label" for="sGender">
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input value="Female" ngModel  #mystudGender="ngModel"class="form-check-input" type="radio" name="studGender" id="sGender">
+            <label class="form-check-label" for="sGender">
+              Female
+            </label>
+          </div>
+    </div>
+        </div>
+        <div class="card-footer">
+         <button type="submit" class="btn btn-success">Add Student</button>
+        </div>
+    
+</form>
+</div>

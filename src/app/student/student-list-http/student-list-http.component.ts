@@ -21,10 +21,16 @@ export class StudentListHttpComponent implements OnInit {
     error:(err)=>{console.log(err)}
   })
   }
+
+  addStudent(){
+    this.router.navigate(['student-add-http']);
+  }
   viewStudent(studId:number){
     this.router.navigate(['student-view-http',studId]);
  }
-
+  editStudent(studId:number){
+    this.router.navigate(['student-edit-http',studId]);
+ }
   deleteStudent(studId:number){
      this.router.navigate(['student-delete-http',studId]);
   }

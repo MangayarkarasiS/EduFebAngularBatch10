@@ -4,22 +4,29 @@
       "id": 1,
       "studName": "Tamarai Alexander",
       "studTotalMarks": 94,
-      "studDob": "1998,10,11",
-      "studGender": "FeMale"
+      "studDob": "2023-07-06",
+      "studGender": "Female"
     },
     {
       "id": 2,
       "studName": "Trump Sachin",
-      "studTotalMarks": 40,
-      "studDob": "1998,12,11",
+      "studTotalMarks": 10,
+      "studDob": "2024-03-01",
       "studGender": "Male"
     },
     {
       "id": 4,
       "studName": "Victor",
       "studTotalMarks": 80,
-      "studDob": "2021,11,12",
+      "studDob": "2023-08-09",
       "studGender": "Male"
+    },
+    {
+      "studName": "Vinod Ramasamy",
+      "studDob": "2024-03-02",
+      "studTotalMarks": 65,
+      "studGender": "Female",
+      "id": 6
     }
   ]
 }

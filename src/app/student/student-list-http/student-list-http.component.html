@@ -1,4 +1,8 @@
-
+<div class="container">
+  <button type="button" class="btn btn-success" (click)="addStudent()">
+    Add Student
+  </button>
+</div>
 <div class="container">
     <h2>List of students</h2>
     <table class="table table-striped">
@@ -11,6 +15,7 @@
           <th>DOB</th>
           <th>Gender</th>
           <th>View </th>
+          <th>Edit </th>
           <th>Delete</th>
         </tr>
         </thead>
@@ -24,7 +29,8 @@
             <td>{{stud.studDob | date:'fullDate'}}</td>
             <td>{{stud.studGender}}</td>
             <td> <button type="button" class="btn btn-warning" (click)="viewStudent(stud.id)">View Student</button></td>
-            <td> <button type="button" class="btn btn-warning" (click)="deleteStudent(stud.id)">Delete Student</button></td>
+            <td> <button type="button" class="btn btn-primary" (click)="editStudent(stud.id)">Edit Student</button></td>
+            <td> <button type="button" class="btn btn-danger" (click)="deleteStudent(stud.id)">Delete Student</button></td>
           </tr>
        
         </tbody>
