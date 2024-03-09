@@ -1,3 +1,7 @@
+
+<div class="container">
+  
+</div>
 <div class="container">
     <form #myForm="ngForm" (ngSubmit)="addStudent(myForm)">
     <div class="card">
@@ -5,6 +9,14 @@
             <h3>Add Student</h3>
         </div>
         <div class="card-body">
+         <!-- <table>
+            <tr>
+              <td>Touched: {{myForm.touched}}</td></tr>
+              <tr>  <td>UnTouched: {{myForm.untouched}}</td></tr>
+              <tr><td>Pristine: {{myForm.pristine}}</td></tr>
+              <tr><td>Dirty: {{myForm.dirty}}</td></tr>
+            
+          </table>-->
            <div class="form-group">
              <label for="sId" class="form-label">Student ID</label>
              <input type="text" 
@@ -22,7 +34,15 @@
                    name="studName" 
                    id="sName"
                    ngModel
+                   required
+                   OnlyText
                    #mystudName="ngModel">
+                   <div class="text-danger" *ngIf="mystudName.errors?.['required'] && mystudName.touched">
+                    Student Name is required!
+                   </div>
+                   <div class="text-danger" *ngIf="mystudName.errors?.['invalidText'] && mystudName.touched">
+                    Student Name should contain only characters!
+                   </div>
           </div>
           <div class="form-group">
             <label for="sMarks" class="form-label">Student TotalMarks</label>
@@ -31,7 +51,11 @@
                     name="studTotalMarks" 
                     id="sMarks"
                     ngModel
+                    required
                     #mystudTotalMarks="ngModel">
+                    <div class="text-danger" *ngIf="!myForm.valid && myForm.touched">
+                      Student Marks not entered!
+                     </div>
           </div>
           <div class="form-group">
             <label for="sDOB" class="form-label">Student ID</label>
@@ -58,7 +82,8 @@
     </div>
         </div>
         <div class="card-footer">
-         <button type="submit" class="btn btn-success">Add Student</button>
+        
+         <button type="submit" [disabled]="myForm.invalid" class="btn btn-success">Add Student</button>
         </div>
     
 </form>

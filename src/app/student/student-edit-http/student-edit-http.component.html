@@ -21,6 +21,15 @@
                    formControlName="rsName"
                    id="sName"
                    >
+                   <div class="text-danger" *ngIf="myReactiveForm.get('rsName')?.errors?.['required']  ">
+                    Student Name is required!
+                   </div>
+                   <div class="text-danger" *ngIf="myReactiveForm.get('rsName')?.errors?.['minlength']  ">
+                    Student Name should be of minimum length 2 characters!
+                   </div>
+                   <div class="text-danger" *ngIf="myReactiveForm.get('rsName')?.errors?.['invalidText']  ">
+                    Student Name should contain only characters!
+                   </div>
           </div>
           <div class="form-group">
             <label for="sMarks" class="form-label">Student TotalMarks</label>
@@ -29,11 +38,17 @@
                     formControlName="rsMarks"
                     id="sMarks"
                     >
+                    <div class="text-danger" *ngIf="myReactiveForm.get('rsMarks')?.errors?.['required']">
+                      Student Marks required!
+                     </div>
           </div>
           <div class="form-group">
             <label for="sDOB" class="form-label">Student Dob</label>
             <input type="date" 
             class="form-control" formControlName="rsDob" id="sDOB">
+            <div class="text-danger" *ngIf="myReactiveForm.get('rsDob')?.errors?.['required']  ">
+              Please enter Student DOB!
+             </div>
           </div>
           <div class="form-check">
             <input class="form-check-input" 
@@ -55,7 +70,9 @@
     </div>
         </div>
         <div class="card-footer">
+        
          <button type="submit" class="btn btn-success">Edit Student</button>
+         <button type="button" class="btn btn-primary" (click)="addValidator()">Add Validator</button>
         </div>
     
 </form>

@@ -31,6 +31,7 @@ import { ErrorComponent } from './error/error.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { StudentAddHttpComponent } from './student/student-add-http/student-add-http.component';
 import { StudentEditHttpComponent } from './student/student-edit-http/student-edit-http.component';
+import { OnlyTextDirective } from './custom-validator/only-text.directive';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { StudentEditHttpComponent } from './student/student-edit-http/student-ed
     StudentDeleteHttpComponent,
     ErrorComponent,
     StudentAddHttpComponent,
-    StudentEditHttpComponent
+    StudentEditHttpComponent,
+    OnlyTextDirective
   
   ],
   imports: [
