@@ -11,6 +11,8 @@ import { ErrorComponent } from './error/error.component';
 import { AuthGuard } from './guard/auth.guard';
 import { StudentAddHttpComponent } from './student/student-add-http/student-add-http.component';
 import { StudentEditHttpComponent } from './student/student-edit-http/student-edit-http.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
  
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path:'student-delete-http/:sid',component:StudentDeleteHttpComponent},
   {path:'student-add-http',component:StudentAddHttpComponent},
   {path:'student-edit-http/:sid',component:StudentEditHttpComponent},
+  {path:'login',component:LoginComponent},
+  {path:'logout',component:LogoutComponent},
   {path:'',redirectTo:'/display',pathMatch:'full'},
   {path:'**',component:ErrorComponent}
 ];

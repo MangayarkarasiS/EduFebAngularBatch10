@@ -1,0 +1,40 @@
+
+<div class="container">
+    <form #myForm="ngForm" (ngSubmit)="login(myForm)">
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            <h3>Login</h3>
+        </div>
+        <div class="card-body">
+          {{errormessage}}
+           <div class="form-group">
+             <label for="uname" class="form-label">UserName</label>
+             <input type="text" 
+                    class="form-control" 
+                    name="uname" 
+                    id="uname"
+                    ngModel
+                    #myuname="ngModel"
+                    >
+           </div>
+           <div class="form-group">
+            <label for="uPassword" class="form-label">Password</label>
+            <input type="password" 
+                   class="form-control" 
+                   name="uPassword" 
+                   id="uPassword"
+                   ngModel
+                  
+                   #myuPassword="ngModel">
+                  
+          </div>
+         
+    
+        </div>
+        <div class="card-footer">
+        
+         <button type="submit" class="btn btn-success">Login</button>
+        </div>
+    </div>
+</form>
+</div>

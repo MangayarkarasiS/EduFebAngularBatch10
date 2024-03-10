@@ -1,4 +1,20 @@
 {
+  "users":[{
+    "uname":"admin",
+    "uPassword":"admin",
+    "token":"dummy-token"
+  },
+  {
+    "uname":"hr",
+    "uPassword":"hr",
+    "token":"dummy-token"
+  },
+  {
+    "uname":"abc",
+    "uPassword":"123",
+    "token":"dummy-token"
+  }
+],
   "student": [
     {
       "id": 1,

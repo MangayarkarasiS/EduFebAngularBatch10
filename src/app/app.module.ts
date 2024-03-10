@@ -32,6 +32,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { StudentAddHttpComponent } from './student/student-add-http/student-add-http.component';
 import { StudentEditHttpComponent } from './student/student-edit-http/student-edit-http.component';
 import { OnlyTextDirective } from './custom-validator/only-text.directive';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { OnlyTextDirective } from './custom-validator/only-text.directive';
     ErrorComponent,
     StudentAddHttpComponent,
     StudentEditHttpComponent,
-    OnlyTextDirective
+    OnlyTextDirective,
+    LoginComponent,
+    LogoutComponent
   
   ],
   imports: [
